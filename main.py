@@ -1,0 +1,37 @@
+from function import print_matrix , check_victory
+from validation import  chek_place ,updet_gamer
+
+matrix = [1,2,3,4,5,6,7,8,9]
+counter  = 1
+while True:
+
+    gamer = updet_gamer(counter)
+    print_matrix(matrix)
+
+    try:
+        place = chek_place()
+    except ValueError as e:
+        print (e)
+        continue
+            
+    
+    if matrix[place-1] == "o":
+        print('the place taken')
+    if matrix[place-1] == "x": 
+        print('the place taken')   
+    matrix[place-1] = gamer
+
+    
+    
+    victor = check_victory(matrix )
+    if victor  ==  'game over':
+        print(f'{victor} the winner is {gamer}! ')
+        print_matrix(matrix)
+        break
+    print(victor) 
+
+    counter += 1
+    
+
+
+    
