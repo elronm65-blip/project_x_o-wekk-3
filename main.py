@@ -15,10 +15,10 @@ while True:
         continue
             
     
-    if matrix[place-1] == "o":
+    if isinstance (matrix[place-1]  , str):
         print('the place taken')
-    if matrix[place-1] == "x": 
-        print('the place taken')   
+        continue
+  
     matrix[place-1] = gamer
 
     
