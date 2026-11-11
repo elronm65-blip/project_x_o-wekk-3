@@ -22,34 +22,30 @@ def check_victory(matrix):
         return 'game over'
     if matrix[0] == matrix[3] == matrix[6] and matrix[0] in ("o", "x"):
         return 'game over'
-    if matrix[2] == matrix[4] == matrix[7] and matrix[2] in ("o", "x"):
+    if matrix[2] == matrix[4] == matrix[6] and matrix[2] in ("o", "x"):
         return 'game over'
     if matrix[0] == matrix[4] == matrix[8] and matrix[0] in ("o", "x"):
          return 'game over'
     if matrix[1] == matrix[4] == matrix[7] and matrix[1] in ("o", "x"):
          return 'game over'
-    return ' no win yet!'
+    count = 0
+    for char in matrix:
+    
+        if isinstance(char, str):
+            count  +=1
+    if count == 9:
+        return "draw!!!"
+        
+        
+    else:
+        return " no win yet continue!"
+    
+     
 
 
 
 
 
-
-
-
-
-# place = int(input("choose place"))
-# if matrix[place-1] == "x":
-#     print('the place taken')
-# if matrix[place-1] == "0": 
-#     print('the place taken')   
-# matrix[place-1] = "x"
-
-
-
-# print_matrix(matrix)
-  
-# print(matrix)
    
     
     

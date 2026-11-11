@@ -28,6 +28,11 @@ while True:
         print(f'{victor} the winner is {gamer}! ')
         print_matrix(matrix)
         break
+    elif  victor  == "draw!!!":
+        print(victor)
+        print_matrix(matrix)
+        break
+
     print(victor) 
 
     counter += 1
