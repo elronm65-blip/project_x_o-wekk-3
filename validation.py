@@ -1,3 +1,5 @@
+from function import print_matrix
+
 def chek_place():
     place = input("choose a place!")
     if not place.isdigit():
@@ -12,4 +14,14 @@ def updet_gamer(counter):
         return  "o"
     else:
         return  "x"    
-        
+def aaa(victor , matrix , gamer):       
+    if victor  ==  'game over':
+        print(f'{victor} the winner is {gamer}! ')
+        print_matrix(matrix)
+        return 1
+    elif  victor  == "draw!!!":
+        print(victor)
+        print_matrix(matrix)
+        return 1
+
+    print(victor) 
